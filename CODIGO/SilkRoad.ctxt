@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=SilkRoad
+comment1.params=lados
+comment1.target=SilkRoad(int)
+comment1.text=\r\n\ Constructor\ que\ dibuja\ la\ espiral\ cuadrada\ continua\ al\ crear\ la\ ruta.\r\n\ @param\ lados\ N\u00FAmero\ de\ lados/segmentos\ de\ la\ espiral\ a\ dibujar.\r\n
+comment2.params=lados\ x0\ y0\ grosor\ lonInicial\ incremento
+comment2.target=void\ mostrarCaminoEspiral(int,\ int,\ int,\ int,\ int,\ int)
+comment2.text=\r\n\ Dibuja\ una\ espiral\ cuadrada\ tipo\ \u201Ccaracol\u201D\ usando\ rect\u00E1ngulos\ finos\ como\ l\u00EDneas.\r\n\ @param\ lados\ N\u00BA\ total\ de\ lados\ o\ segmentos\ de\ la\ espiral.\r\n\ @param\ x0\ Coordenada\ inicial\ horizontal.\r\n\ @param\ y0\ Coordenada\ inicial\ vertical.\r\n\ @param\ grosor\ Ancho\ del\ \u201Ctrazo\u201D\ en\ p\u00EDxeles.\r\n\ @param\ lonInicial\ Longitud\ inicial\ del\ primer\ segmento.\r\n\ @param\ incremento\ Valor\ con\ que\ crece\ la\ longitud\ tras\ cada\ dos\ segmentos.\r\n
+comment3.params=s
+comment3.target=void\ agregarTienda(Store)
+comment4.params=r
+comment4.target=void\ agregarRobot(Robot)
+comment5.params=idx
+comment5.target=int\ desocupacionesTienda(int)
+comment6.params=idx
+comment6.target=int\ gananciaRobot(int)
+comment7.params=robot\ newX\ newY
+comment7.target=boolean\ moverRobotSinColision(Robot,\ int,\ int)
+comment8.params=
+comment8.target=void\ destacarRobotGanador()
+numComments=9
