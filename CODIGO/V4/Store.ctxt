@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=Store
-comment0.text=\r\n\ Tienda\ que\ se\ posiciona\ siguiendo\ el\ patr\u00F3n\ de\ espiral\ del\ simulador\ de\ la\ Ruta\ de\ la\ Seda.\r\n\ Actualizada\ para\ posicionamiento\ en\ espiral\ usando\ coordenadas\ exactas.\r\n\r\n\ @author\ Spiral\ Positioning\ Update\ -\ Ciclo\ 3\r\n\ @version\ 3.0\ (October\ 2025)\r\n
 comment1.params=location\ tenges\ spiralPath
 comment1.target=Store(int,\ int,\ SpiralPath)
 comment1.text=\r\n\ Constructor\ de\ la\ tienda\ con\ posicionamiento\ en\ espiral\r\n\ @param\ location\ Ubicaci\u00F3n\ en\ la\ ruta\r\n\ @param\ tenges\ Cantidad\ inicial\ de\ tenges\r\n\ @param\ spiralPath\ Sistema\ de\ coordenadas\ de\ la\ espiral\r\n

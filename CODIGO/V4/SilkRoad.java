@@ -1,12 +1,5 @@
 import java.util.*;
 
-/**
- * Simulador de la Ruta de la Seda con robots que siguen el patrón de espiral exacto
- * Actualizado para movimiento en espiral real y posicionamiento preciso
- * 
- * @author Spiral Movement System - Ciclo 3
- * @version 3.0 (October 2025)
- */
 public class SilkRoad {
 
     private int length;

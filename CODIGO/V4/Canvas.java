@@ -3,13 +3,6 @@ import java.awt.*;
 import java.util.List;
 import java.util.*;
 
-/**
- * Canvas class updated to work with the refactored Shape hierarchy.
- * Maintains full compatibility with the Shape-based architecture.
- * 
- * @author Updated for Shape Refactoring - Ciclo 1, 2, 3
- * @version 3.0 (October 2025)
- */
 public class Canvas {
 
     // Note: The implementation of this class (specifically the handling of

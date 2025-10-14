@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=Shape
-comment0.text=\r\n\ Abstract\ base\ class\ for\ all\ shapes\ that\ can\ be\ manipulated\ and\ drawn\ on\ a\ canvas.\r\n\ This\ class\ contains\ common\ behavior\ shared\ by\ all\ geometric\ shapes.\r\n\ \r\n\ @author\ Refactored\ for\ Silk\ Road\ Project\ -\ Ciclo\ 1,\ 2,\ 3\r\n\ @version\ 3.0\ (October\ 2025)\r\n
 comment1.params=
 comment1.target=Shape()
 comment1.text=\r\n\ Default\ constructor\ for\ Shape\r\n

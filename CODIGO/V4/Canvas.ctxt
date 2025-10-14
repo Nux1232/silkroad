@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=Canvas
-comment0.text=\r\n\ Canvas\ class\ updated\ to\ work\ with\ the\ refactored\ Shape\ hierarchy.\r\n\ Maintains\ full\ compatibility\ with\ the\ Shape-based\ architecture.\r\n\ \r\n\ @author\ Updated\ for\ Shape\ Refactoring\ -\ Ciclo\ 1,\ 2,\ 3\r\n\ @version\ 3.0\ (October\ 2025)\r\n
 comment1.params=
 comment1.target=Canvas\ getCanvas()
 comment1.text=\r\n\ Factory\ method\ to\ get\ the\ canvas\ singleton\ object.\r\n

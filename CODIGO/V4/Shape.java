@@ -1,12 +1,5 @@
 import java.awt.*;
 
-/**
- * Abstract base class for all shapes that can be manipulated and drawn on a canvas.
- * This class contains common behavior shared by all geometric shapes.
- * 
- * @author Refactored for Silk Road Project - Ciclo 1, 2, 3
- * @version 3.0 (October 2025)
- */
 public abstract class Shape {
 
     // Common attributes for all shapes

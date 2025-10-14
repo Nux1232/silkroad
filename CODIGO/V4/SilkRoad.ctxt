@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=SilkRoad
-comment0.text=\r\n\ Simulador\ de\ la\ Ruta\ de\ la\ Seda\ con\ robots\ que\ siguen\ el\ patr\u00F3n\ de\ espiral\ exacto\r\n\ Actualizado\ para\ movimiento\ en\ espiral\ real\ y\ posicionamiento\ preciso\r\n\ \r\n\ @author\ Spiral\ Movement\ System\ -\ Ciclo\ 3\r\n\ @version\ 3.0\ (October\ 2025)\r\n
 comment1.params=length
 comment1.target=SilkRoad(int)
 comment1.text=\r\n\ Constructor\ que\ crea\ una\ ruta\ de\ longitud\ espec\u00EDfica\ con\ movimiento\ en\ espiral\r\n\ @param\ length\ Longitud\ de\ la\ ruta\r\n

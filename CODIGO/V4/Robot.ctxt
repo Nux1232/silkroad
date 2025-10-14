@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=Robot
-comment0.text=\r\n\ Robot\ que\ se\ mueve\ siguiendo\ el\ patr\u00F3n\ de\ espiral\ del\ simulador\ de\ la\ Ruta\ de\ la\ Seda.\r\n\ Actualizado\ para\ movimiento\ en\ espiral\ usando\ coordenadas\ exactas.\r\n\r\n\ @author\ Spiral\ Movement\ Update\ -\ Ciclo\ 3\r\n\ @version\ 3.0\ (October\ 2025)\r\n
 comment1.params=location\ spiralPath
 comment1.target=Robot(int,\ SpiralPath)
 comment1.text=\r\n\ Constructor\ del\ robot\ con\ movimiento\ en\ espiral\r\n\ @param\ location\ Ubicaci\u00F3n\ inicial\ en\ la\ ruta\r\n\ @param\ spiralPath\ Sistema\ de\ coordenadas\ de\ la\ espiral\r\n

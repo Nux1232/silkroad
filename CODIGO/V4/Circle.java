@@ -1,12 +1,5 @@
 import java.awt.*;
 
-/**
- * A circle that can be manipulated and that draws itself on a canvas.
- * Refactored to inherit from Shape class for better code reusability.
- *
- * @author Michael Kolling and David J. Barnes (Refactored for Ciclo 1-3)
- * @version 3.0 (October 2025)
- */
 public class Circle extends Shape {
 
     public static final double PI = 3.1416;

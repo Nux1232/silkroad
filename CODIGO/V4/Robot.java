@@ -1,10 +1,4 @@
-/**
- * Robot que se mueve siguiendo el patrón de espiral del simulador de la Ruta de la Seda.
- * Actualizado para movimiento en espiral usando coordenadas exactas.
- *
- * @author Spiral Movement Update - Ciclo 3
- * @version 3.0 (October 2025)
- */
+
 public class Robot {
 
     private int location;

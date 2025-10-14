@@ -1,10 +1,4 @@
-/**
- * Tienda que se posiciona siguiendo el patrón de espiral del simulador de la Ruta de la Seda.
- * Actualizada para posicionamiento en espiral usando coordenadas exactas.
- *
- * @author Spiral Positioning Update - Ciclo 3
- * @version 3.0 (October 2025)
- */
+
 public class Store {
 
     private int location;
