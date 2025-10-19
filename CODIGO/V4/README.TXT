@@ -1,1 +1,1 @@
-provisional, queda pendiente corregirr el movimiento de los robots y re - agregar la barra de progreso.
+Corregido
