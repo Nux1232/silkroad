@@ -1,0 +1,37 @@
+#BlueJ class context
+comment0.target=SilkRoadContestCTest
+comment0.text=\r\n\ Casos\ de\ prueba\ comunes\ para\ SilkRoadContest\r\n\ Basados\ en\ el\ problema\ ICPC\ 2024\ -\ The\ Silk\ Road\ with\ Robots\r\n\ \r\n\ Formato\ de\ entrada\ ICPC\:\r\n\ days[i][0]\ \=\ tipo\ (1\ \=\ robot,\ 2\ \=\ tienda)\r\n\ days[i][1]\ \=\ ubicaci\u00F3n\r\n\ days[i][2]\ \=\ tenges\ (solo\ si\ tipo\ \=\=\ 2)\r\n\ \r\n\ @author\ Silk\ Road\ Project\ -\ Ciclo\ 3\r\n\ @version\ 1.0\r\n
+comment1.params=
+comment1.target=void\ testCasoComun1()
+comment1.text=\r\n\ Caso\ com\u00FAn\ 1\:\ Ejemplo\ oficial\ del\ PDF\ ICPC\r\n
+comment10.params=
+comment10.target=void\ runAllTests()
+comment10.text=\r\n\ Ejecutar\ todos\ los\ casos\ comunes\r\n
+comment11.params=args
+comment11.target=void\ main(java.lang.String[])
+comment11.text=\r\n\ M\u00E9todo\ principal\ para\ ejecutar\ desde\ BlueJ\ o\ l\u00EDnea\ de\ comandos\r\n
+comment2.params=
+comment2.target=void\ testCasoComun2()
+comment2.text=\r\n\ Caso\ com\u00FAn\ 2\:\ Solo\ robots\ (no\ hay\ tiendas\ para\ visitar)\r\n
+comment3.params=
+comment3.target=void\ testCasoComun3()
+comment3.text=\r\n\ Caso\ com\u00FAn\ 3\:\ Solo\ tiendas\ (no\ hay\ robots\ para\ recolectar)\r\n
+comment4.params=
+comment4.target=void\ testCasoComun4()
+comment4.text=\r\n\ Caso\ com\u00FAn\ 4\:\ Robot\ y\ tienda\ en\ la\ misma\ ubicaci\u00F3n\r\n
+comment5.params=
+comment5.target=void\ testCasoComun5()
+comment5.text=\r\n\ Caso\ com\u00FAn\ 5\:\ M\u00FAltiples\ robots,\ m\u00FAltiples\ tiendas\r\n
+comment6.params=
+comment6.target=void\ testCasoComun6()
+comment6.text=\r\n\ Caso\ com\u00FAn\ 6\:\ Ganancia\ negativa\ (costo\ >\ tenges)\r\n
+comment7.params=
+comment7.target=void\ testCasoComun7()
+comment7.text=\r\n\ Caso\ com\u00FAn\ 7\:\ Entrada\ vac\u00EDa\r\n
+comment8.params=
+comment8.target=void\ testCasoComun8()
+comment8.text=\r\n\ Caso\ com\u00FAn\ 8\:\ Entrada\ null\r\n
+comment9.params=arr
+comment9.target=java.lang.String\ arrayToString(int[])
+comment9.text=\r\n\ M\u00E9todo\ auxiliar\ para\ convertir\ array\ a\ string\r\n
+numComments=12
