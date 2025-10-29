@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85028930-9856-472c-a898-c62bebe6e2e9" name="Changes" comment="" />
+    <list default="true" id="85028930-9856-472c-a898-c62bebe6e2e9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Astah/silkroad.asta" beforeDir="false" afterPath="$PROJECT_DIR$/../Astah/silkroad.asta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/V4.7/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/V4.7/package.bluej" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,13 +41,15 @@
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1&quot;: &quot;true&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/juanp/OneDrive/Documents/Universidad/DOPO/silkroad&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/juanp/OneDrive/Documents/Universidad/DOPO/Proyecto/silkroadV2/CODIGO&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -77,6 +83,10 @@
       <workItem from="1760575094870" duration="42000" />
       <workItem from="1760748339315" duration="1992000" />
       <workItem from="1760756833994" duration="27000" />
+      <workItem from="1761679440215" duration="607000" />
+      <workItem from="1761704902185" duration="2083000" />
+      <workItem from="1761736627687" duration="87000" />
+      <workItem from="1761736831404" duration="22000" />
     </task>
     <servers />
   </component>
