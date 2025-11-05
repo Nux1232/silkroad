@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=TenderRobot
+comment0.text=\r\n\ Robot\ tierno\ que\ solo\ toma\ la\ mitad\ del\ dinero\ de\ las\ tiendas.\r\n\ Es\ considerado\ con\ las\ tiendas\ y\ no\ las\ vac\u00EDa\ completamente.\r\n\ \r\n\ @author\ DOPO\ -\ Ciclo\ 4\r\n\ @version\ 4.0\ -\ Octubre\ 2025\r\n
+comment1.params=location\ x\ y
+comment1.target=TenderRobot(int,\ int,\ int)
+comment1.text=\r\n\ Constructor\ de\ robot\ tierno\r\n\ @param\ location\ Ubicaci\u00F3n\ inicial\ en\ la\ ruta\r\n\ @param\ x\ Posici\u00F3n\ X\ inicial\ en\ el\ canvas\r\n\ @param\ y\ Posici\u00F3n\ Y\ inicial\ en\ el\ canvas\r\n
+comment2.params=available
+comment2.target=int\ calculateTakeAmount(int)
+comment2.text=\r\n\ Robot\ tender\ solo\ toma\ la\ MITAD\ del\ dinero\ disponible\r\n\ @param\ available\ Dinero\ disponible\ en\ la\ tienda\r\n\ @return\ La\ mitad\ del\ dinero\ (redondeado\ hacia\ arriba)\r\n
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4

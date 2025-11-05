@@ -1,11 +1,10 @@
 package silkRoad.robots;
-
-import shapes.Rectangle;
+import shapes.*;
 
 
 public class Robot {
     protected int location;
-    protected Rectangle figure;
+    protected Shape figure;
     protected static String[] colores = {"blue", "cyan", "green", "gray"};
     protected static int contadorColores = 0;
     protected int x, y;

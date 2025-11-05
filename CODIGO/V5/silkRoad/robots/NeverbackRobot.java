@@ -1,13 +1,10 @@
 package silkRoad.robots;
-
-import shapes.*;
+import shapes.Rectangle;
+import shapes.Triangle;
 
 /**
  * Robot que nunca retrocede.
  * Solo acepta movimientos hacia adelante (ubicaciones mayores).
- * 
- * @author DOPO - Ciclo 4
- * @version 4.0 - Octubre 2025
  */
 public class NeverbackRobot extends Robot {
     private static String[] coloresNeverback = {"red", "orange", "yellow"};
@@ -25,17 +22,16 @@ public class NeverbackRobot extends Robot {
         
         // Cambiar de Rectangle a Triangle para distinguir visualmente
         figure.makeInvisible();
-        figure = new Triangle();
-        ((Triangle)figure).changeSize(25, 25);
-        int initialX = 60;
+        Triangle triangulo = new Triangle();
+        int initialX = x;
         int initialY = 50;
-        figure.moveHorizontal(x - initialX);
-        figure.moveVertical(y - initialY);
+        triangulo.moveHorizontal(x - initialX);
+        triangulo.moveVertical(y - initialY);
         
         // Asignar color cálido
         this.color = coloresNeverback[contadorNeverback % coloresNeverback.length];
         contadorNeverback++;
-        figure.changeColor(color);
+        triangulo.changeColor(color);   
     }
 
     /**

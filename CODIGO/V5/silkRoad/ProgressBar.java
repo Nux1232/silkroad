@@ -1,6 +1,6 @@
 package silkRoad;
 import java.awt.Color;
-
+import shapes.*;
 /**
  * Barra de progreso para mostrar la ganancia actual vs máxima posible
  * Requisito de usabilidad #4: Sin números, solo barra visual

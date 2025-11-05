@@ -1,6 +1,5 @@
 package silkRoad;
 
-paka
 public class SilkRoadContestTest {
     
     /**

@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=ScoutRobot
+comment0.text=\r\n\ Robot\ explorador\ que\ puede\ ver\ tiendas\ futuras\ antes\ de\ moverse.\r\n\ Toma\ decisiones\ m\u00E1s\ informadas\ al\ explorar\ el\ camino\ adelante.\r\n\ \r\n\ @author\ DOPO\ -\ Ciclo\ 4\r\n\ @version\ 4.0\ -\ Octubre\ 2025\r\n
+comment1.params=location\ x\ y
+comment1.target=ScoutRobot(int,\ int,\ int)
+comment1.text=\r\n\ Constructor\ de\ robot\ explorador\r\n\ @param\ location\ Ubicaci\u00F3n\ inicial\ en\ la\ ruta\r\n\ @param\ x\ Posici\u00F3n\ X\ inicial\ en\ el\ canvas\r\n\ @param\ y\ Posici\u00F3n\ Y\ inicial\ en\ el\ canvas\r\n
+comment2.params=
+comment2.target=int\ getScoutRange()
+comment2.text=\r\n\ Obtener\ el\ rango\ de\ exploraci\u00F3n\ del\ robot\r\n\ @return\ N\u00FAmero\ de\ tiendas\ que\ puede\ ver\ adelante\r\n
+comment3.params=range
+comment3.target=void\ setScoutRange(int)
+comment3.text=\r\n\ Establecer\ el\ rango\ de\ exploraci\u00F3n\r\n\ @param\ range\ Nuevo\ rango\ de\ exploraci\u00F3n\r\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

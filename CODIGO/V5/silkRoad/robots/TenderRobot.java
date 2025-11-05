@@ -1,6 +1,7 @@
 package silkRoad.robots;
 
-import shapes.*;
+import shapes.Rectangle;
+import shapes.Circle;
 
 /**
  * Robot tierno que solo toma la mitad del dinero de las tiendas.
@@ -36,6 +37,7 @@ public class TenderRobot extends Robot {
         this.color = coloresTender[contadorTender % coloresTender.length];
         contadorTender++;
         figure.changeColor(color);
+
     }
 
     /**

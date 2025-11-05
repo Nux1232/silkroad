@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=AutonomousStore
+comment0.text=\r\n\ Tienda\ aut\u00F3noma\ que\ escoge\ su\ propia\ posici\u00F3n.\r\n\ No\ acepta\ la\ ubicaci\u00F3n\ indicada,\ sino\ que\ escoge\ una\ cercana.\r\n\ \r\n\ @author\ DOPO\ -\ Ciclo\ 4\r\n\ @version\ 4.0\ -\ Octubre\ 2025\r\n
+comment1.params=suggestedLocation\ tenges\ x\ y
+comment1.target=AutonomousStore(int,\ int,\ int,\ int)
+comment1.text=\r\n\ Constructor\ de\ tienda\ aut\u00F3noma\r\n\ @param\ suggestedLocation\ Ubicaci\u00F3n\ sugerida\ (ser\u00E1\ modificada)\r\n\ @param\ tenges\ Cantidad\ inicial\ de\ tenges\r\n\ @param\ x\ Posici\u00F3n\ X\ sugerida\ en\ el\ canvas\r\n\ @param\ y\ Posici\u00F3n\ Y\ sugerida\ en\ el\ canvas\r\n
+comment2.params=suggested
+comment2.target=int\ chooseOwnLocation(int)
+comment2.text=\r\n\ La\ tienda\ escoge\ su\ propia\ ubicaci\u00F3n\ cercana\ a\ la\ sugerida\r\n\ @param\ suggested\ Ubicaci\u00F3n\ sugerida\r\n\ @return\ Ubicaci\u00F3n\ escogida\ aut\u00F3nomamente\r\n
+comment3.params=
+comment3.target=int\ getSuggestedLocation()
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

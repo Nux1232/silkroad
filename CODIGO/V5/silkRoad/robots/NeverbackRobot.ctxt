@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=NeverbackRobot
+comment0.text=\r\n\ Robot\ que\ nunca\ retrocede.\r\n\ Solo\ acepta\ movimientos\ hacia\ adelante\ (ubicaciones\ mayores).\r\n
+comment1.params=location\ x\ y
+comment1.target=NeverbackRobot(int,\ int,\ int)
+comment1.text=\r\n\ Constructor\ de\ robot\ que\ nunca\ retrocede\r\n\ @param\ location\ Ubicaci\u00F3n\ inicial\ en\ la\ ruta\r\n\ @param\ x\ Posici\u00F3n\ X\ inicial\ en\ el\ canvas\r\n\ @param\ y\ Posici\u00F3n\ Y\ inicial\ en\ el\ canvas\r\n
+comment2.params=newLocation
+comment2.target=boolean\ canMoveTo(int)
+comment2.text=\r\n\ Robot\ neverback\ solo\ puede\ moverse\ hacia\ adelante\r\n\ @param\ newLocation\ Nueva\ ubicaci\u00F3n\ propuesta\r\n\ @return\ true\ solo\ si\ newLocation\ >\=\ location\ actual\r\n
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4

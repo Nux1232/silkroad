@@ -1,5 +1,6 @@
 package silkRoad;
 
+import silkRoad.robots.*;
 import java.util.*;
 
 /**
@@ -136,7 +137,7 @@ public class SilkRoadContest {
             return;
         }
         
-        System.out.println("\\n============================================================");
+        System.out.println("\n============================================================");
         System.out.println("  SIMULACIÓN SILK ROAD - PROBLEMA MARATÓN ICPC 2024");
         System.out.println("============================================================");
         System.out.println("Modo: " + (slow ? "LENTO (paso a paso)" : "RÁPIDO"));
@@ -150,7 +151,7 @@ public class SilkRoadContest {
         ArrayList<int[]> storeData = new ArrayList<int[]>();
         
         for (int day = 0; day < days.length; day++) {
-            System.out.println("\\n------------------------------------------------------------");
+            System.out.println("\n------------------------------------------------------------");
             System.out.println("DÍA " + (day + 1));
             System.out.println("------------------------------------------------------------");
             
@@ -176,11 +177,11 @@ public class SilkRoadContest {
             waitTime(slow ? 1000 : 300);
             
             int maxProfit = calculateMaxProfit(robotLocations, storeData);
-            System.out.println("\\nGanancia máxima posible: " + maxProfit);
+            System.out.println("\nGanancia máxima posible: " + maxProfit);
             
             if (!robotLocations.isEmpty() && !storeData.isEmpty()) {
                 int[][] assignment = findOptimalAssignmentDetails(robotLocations, storeData);
-                System.out.println("\\nMovimientos óptimos:");
+                System.out.println("\nMovimientos óptimos:");
                 
                 for (int i = 0; i < assignment.length; i++) {
                     int robotIdx = assignment[i][0];
@@ -209,7 +210,7 @@ public class SilkRoadContest {
             waitTime(slow ? 2000 : 500);
         }
         
-        System.out.println("\\n============================================================");
+        System.out.println("\n============================================================");
         System.out.println("  SIMULACIÓN COMPLETADA");
         System.out.println("============================================================");
         
@@ -273,3 +274,5 @@ public class SilkRoadContest {
         }
     }
 }
+
+

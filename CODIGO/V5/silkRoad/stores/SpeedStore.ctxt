@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=SpeedStore
+comment0.text=\r\n\ Tienda\ r\u00E1pida\ que\ atiende\ sin\ costo\ de\ movimiento.\r\n\ Los\ robots\ no\ pagan\ el\ costo\ de\ distancia\ al\ visitarla.\r\n\ \r\n\ @author\ DOPO\ -\ Ciclo\ 4\r\n\ @version\ 4.0\ -\ Octubre\ 2025\r\n
+comment1.params=location\ tenges\ x\ y
+comment1.target=SpeedStore(int,\ int,\ int,\ int)
+comment1.text=\r\n\ Constructor\ de\ tienda\ r\u00E1pida\r\n\ @param\ location\ Ubicaci\u00F3n\ en\ la\ ruta\r\n\ @param\ tenges\ Cantidad\ inicial\ de\ tenges\r\n\ @param\ x\ Posici\u00F3n\ X\ en\ el\ canvas\r\n\ @param\ y\ Posici\u00F3n\ Y\ en\ el\ canvas\r\n
+comment2.params=distance
+comment2.target=int\ getMovementCost(int)
+comment2.text=\r\n\ Tienda\ r\u00E1pida\:\ no\ cobra\ costo\ de\ movimiento\r\n\ @param\ distance\ Distancia\ al\ robot\r\n\ @return\ 0\ (sin\ costo\ de\ movimiento)\r\n
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4

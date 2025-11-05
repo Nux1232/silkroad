@@ -6,8 +6,6 @@ import shapes.*;
  * Robot explorador que puede ver tiendas futuras antes de moverse.
  * Toma decisiones más informadas al explorar el camino adelante.
  * 
- * @author DOPO - Ciclo 4
- * @version 4.0 - Octubre 2025
  */
 public class ScoutRobot extends Robot {
     private static String[] coloresScout = {"magenta", "purple"};

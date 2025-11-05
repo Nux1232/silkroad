@@ -1,4 +1,4 @@
-package shapes
+package shapes;
 import java.awt.*;
 
 public class Triangle extends Shape {

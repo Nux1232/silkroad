@@ -1,7 +1,5 @@
 package silkRoad;
 
- 
-
 import silkRoad.stores.*;
 import silkRoad.robots.*;
 import shapes.*;
@@ -22,7 +20,7 @@ public class SilkRoad {
 
     // NUEVO: Parámetros para tablero CUADRADO
     private int boardSize;           // Tamaño del tablero (ej: 10x10, 15x15)
-    private int cellSize = 30;       // Tamaño de cada celda
+    private int cellSize = 100;       // Tamaño de cada celda
     private int boardX = 100;        // Posición X del tablero
     private int boardY = 100;        // Posición Y del tablero
 
@@ -85,7 +83,7 @@ public class SilkRoad {
         for (int i = 0; i <= boardSize; i++) {
             // Líneas horizontales
             Rectangle lineaH = new Rectangle();
-            lineaH.changeSize(2, boardSize * cellSize);
+            lineaH.changeSize(boardSize * cellSize, 2);
             lineaH.moveHorizontal(boardX);
             lineaH.moveVertical(boardY + i * cellSize);
             lineaH.changeColor("lightGray");
@@ -93,7 +91,7 @@ public class SilkRoad {
 
             // Líneas verticales
             Rectangle lineaV = new Rectangle();
-            lineaV.changeSize(boardSize * cellSize, 2);
+            lineaV.changeSize(2, boardSize * cellSize);
             lineaV.moveHorizontal(boardX + i * cellSize);
             lineaV.moveVertical(boardY);
             lineaV.changeColor("lightGray");
@@ -110,9 +108,9 @@ public class SilkRoad {
     private void marcarCaminoEspiral() {
         for (int i = 0; i < Math.min(length, boardSize * boardSize); i++) {
             int[] coords = getSpiralCoordinates(i);
-            int x = coords;
-            int y = coords;
-
+            int x = coords[0];  // Primer elemento = coordenada X
+            int y = coords[1];  // Segundo elemento = coordenada Y
+            
             Rectangle celda = new Rectangle();
             celda.changeSize(cellSize - 4, cellSize - 4);
             celda.moveHorizontal(boardX + x * cellSize + 2);
@@ -165,7 +163,7 @@ public class SilkRoad {
      */
     private int calculateSpiralX(int location) {
         int[] coords = getSpiralCoordinates(location);
-        return boardX + coords * cellSize + cellSize / 2;
+        return boardX + coords[0] * cellSize + cellSize / 2;  // coords[0] en lugar de coords
     }
 
     /**
@@ -175,7 +173,7 @@ public class SilkRoad {
      */
     private int calculateSpiralY(int location) {
         int[] coords = getSpiralCoordinates(location);
-        return boardY + coords * cellSize + cellSize / 2;
+        return boardY + coords[1] * cellSize + cellSize / 2;  // coords[1] en lugar de coords
     }
 
     /**
@@ -283,10 +281,6 @@ public class SilkRoad {
         }
         lastOperationOk = true;
     }
-
-    // ... [CONTINÚA CON LOS MÉTODOS EXISTENTES ADAPTADOS] ...
-    // Los métodos moveRobot, interactWithStore, etc. deben modificarse
-    // para usar las nuevas capacidades de los tipos de robots y tiendas
 
     /**
      * MODIFICADO: Mueve un robot específico una cantidad de metros
@@ -396,6 +390,111 @@ public class SilkRoad {
         return netProfit;
     }
 
-    // ... [Resto de métodos: removeStore, removeRobot, moveRobots, etc.]
-    // ... [Métodos de visualización, profit, stores, robots, etc.]
+    // Métodos auxiliares que faltan
+    private void showError(String message) {
+        if (visible) {
+            System.err.println("ERROR: " + message);
+        }
+    }
+
+    private void removeStore(int location) {
+        for (int i = 0; i < stores.size(); i++) {
+            Store store = (Store) stores.get(i);
+            if (store.getLocation() == location) {
+                stores.remove(i);
+                break;
+            }
+        }
+    }
+
+    private void updateProgressBar() {
+        if (progressBar != null) {
+            int progress = (int) ((double) totalProfit / 1000 * 100); // Ajusta según tu lógica
+            progressBar.setCurrentValue(progress);
+        }
+    }
+        
+        /**
+     * Hace visible la simulación completa (canvas y barra de progreso)
+     */
+    public void makeVisible() {
+        this.visible = true;
+        if (canvas != null) {
+            canvas.isVisible();
+        }
+        if (progressBar != null) {
+            progressBar.makeVisible();
+        }
+        // Hacer visibles todos los robots y tiendas
+        for (int i = 0; i < robots.size(); i++) {
+            Robot robot = (Robot) robots.get(i);
+            robot.show();
+        }
+        for (int i = 0; i < stores.size(); i++) {
+            Store store = (Store) stores.get(i);
+            store.show();
+        }
+    }
+    
+    /**
+     * Reabastecer todas las tiendas a sus valores iniciales
+     */
+    public void resupplyStores() {
+        for (int i = 0; i < stores.size(); i++) {
+            Store store = (Store) stores.get(i);
+            // Aquí asumiendo que Store tiene un método para reabastecer
+            // Si no existe, puedes crear una nueva tienda con los mismos datos
+            System.out.println("Reabasteciendo tienda en ubicación " + store.getLocation());
+            // store.resupply();  // Si este método existe en Store
+        }
+    }
+    
+    /**
+     * Retorna todos los robots a sus ubicaciones iniciales
+     */
+    public void returnRobots() {
+        for (int i = 0; i < robots.size(); i++) {
+            Robot robot = (Robot) robots.get(i);
+            int initialLocation = robot.getInitialLocation();
+            int currentLocation = robot.getLocation();
+            
+            if (currentLocation != initialLocation) {
+                System.out.println("Retornando robot de ubicación " + currentLocation + 
+                                 " a ubicación inicial " + initialLocation);
+                
+                int x = calculateSpiralX(initialLocation);
+                int y = calculateSpiralY(initialLocation);
+                robot.setLocation(initialLocation);
+                robot.moveTo(x, y);
+            }
+        }
+    }
+    
+    /**
+     * Finaliza la simulación (limpia recursos)
+     */
+    public void finish() {
+        System.out.println("\nFinalizando simulación...");
+        System.out.println("Ganancia total obtenida: " + totalProfit);
+        
+        // Hacer invisibles todos los elementos
+        for (int i = 0; i < robots.size(); i++) {
+            Robot robot = (Robot) robots.get(i);
+            robot.hide();
+        }
+        for (int i = 0; i < stores.size(); i++) {
+            Store store = (Store) stores.get(i);
+            store.hide();
+        }
+        
+        if (progressBar != null) {
+            progressBar.makeInvisible();
+        }
+        
+        this.visible = false;
+        System.out.println("Simulación finalizada.");
+    }
+
+    
+    
 }

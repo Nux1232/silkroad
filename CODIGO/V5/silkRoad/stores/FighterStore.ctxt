@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=FighterStore
+comment0.text=\r\n\ Tienda\ luchadora\ que\ solo\ permite\ ser\ robada\ por\ robots\ con\ m\u00E1s\ dinero.\r\n\ Defiende\ su\ dinero\ de\ robots\ pobres.\r\n\ \r\n\ @author\ DOPO\ -\ Ciclo\ 4\r\n\ @version\ 4.0\ -\ Octubre\ 2025\r\n
+comment1.params=location\ tenges\ x\ y
+comment1.target=FighterStore(int,\ int,\ int,\ int)
+comment1.text=\r\n\ Constructor\ de\ tienda\ luchadora\r\n\ @param\ location\ Ubicaci\u00F3n\ en\ la\ ruta\r\n\ @param\ tenges\ Cantidad\ inicial\ de\ tenges\r\n\ @param\ x\ Posici\u00F3n\ X\ en\ el\ canvas\r\n\ @param\ y\ Posici\u00F3n\ Y\ en\ el\ canvas\r\n
+comment2.params=robotMoney
+comment2.target=boolean\ canBeRobbedBy(int)
+comment2.text=\r\n\ Verifica\ si\ el\ robot\ puede\ robar\ de\ esta\ tienda\r\n\ Solo\ robots\ con\ M\u00C1S\ dinero\ que\ la\ tienda\ pueden\ robar\r\n\ @param\ robotMoney\ Cantidad\ de\ dinero\ del\ robot\r\n\ @return\ true\ si\ el\ robot\ tiene\ m\u00E1s\ dinero\ que\ la\ tienda\r\n
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4
