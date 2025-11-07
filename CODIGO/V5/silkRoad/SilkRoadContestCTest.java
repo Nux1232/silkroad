@@ -1,308 +1,101 @@
 package silkRoad;
 
-/**
- * Casos de prueba comunes para SilkRoadContest
- * Basados en el problema ICPC 2024 - The Silk Road with Robots
- * 
- * Formato de entrada ICPC:
- * days[i][0] = tipo (1 = robot, 2 = tienda)
- * days[i][1] = ubicación
- * days[i][2] = tenges (solo si tipo == 2)
- * 
- * @author Silk Road Project - Ciclo 3
- * @version 1.0
- */
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
 public class SilkRoadContestCTest {
-    
-    /**
-     * Caso común 1: Ejemplo oficial del PDF ICPC
-     */
+
+    @Test
     public void testCasoComun1() {
-        System.out.println("=== Caso Común 1: Ejemplo ICPC Oficial ===");
-        
         int[][] days = {
-            {1, 20},        // Día 1: Robot en posición 20
-            {2, 15, 15},    // Día 2: Tienda en 15 con 15 tenges
-            {2, 40, 50},    // Día 3: Tienda en 40 con 50 tenges
-            {1, 50},        // Día 4: Robot en posición 50
-            {2, 80, 20},    // Día 5: Tienda en 80 con 20 tenges
-            {2, 70, 30}     // Día 6: Tienda en 70 con 30 tenges
+            {1, 20},
+            {2, 15, 15},
+            {2, 40, 50},
+            {1, 50},
+            {2, 80, 20},
+            {2, 70, 30}
         };
-        
-        // Ganancias esperadas según el problema ICPC
         int[] expected = {0, 10, 35, 50, 50, 60};
         int[] result = SilkRoadContest.solve(days);
-        
-        System.out.println("Resultados esperados: " + arrayToString(expected));
-        System.out.println("Resultados obtenidos:  " + arrayToString(result));
-        
-        boolean passed = true;
-        for (int i = 0; i < expected.length; i++) {
-            if (result[i] != expected[i]) {
-                System.out.println("  ✗ Día " + (i+1) + ": esperado " + expected[i] + 
-                                 ", obtenido " + result[i]);
-                passed = false;
-            } else {
-                System.out.println("  ✓ Día " + (i+1) + ": " + result[i]);
-            }
-        }
-        
-        if (passed) {
-            System.out.println("✓ Caso Común 1: PASADO\n");
-        } else {
-            System.out.println("✗ Caso Común 1: FALLIDO\n");
-        }
+        assertArrayEquals(expected, result, "Caso Común 1 falló");
     }
-    
-    /**
-     * Caso común 2: Solo robots (no hay tiendas para visitar)
-     */
+
+    @Test
     public void testCasoComun2() {
-        System.out.println("=== Caso Común 2: Solo Robots ===");
-        
         int[][] days = {
-            {1, 10},    // Robot en 10
-            {1, 20},    // Robot en 20
-            {1, 30}     // Robot en 30
+            {1, 10},
+            {1, 20},
+            {1, 30}
         };
-        
         int[] result = SilkRoadContest.solve(days);
-        
-        // Todos deben ser 0 (no hay tiendas)
-        boolean passed = (result[0] == 0 && result[1] == 0 && result[2] == 0);
-        
-        System.out.println("Resultados: " + arrayToString(result));
-        System.out.println(passed ? 
-            "✓ Caso Común 2: PASADO (0 ganancia sin tiendas)\n" : 
-            "✗ Caso Común 2: FALLIDO\n");
+        int[] expected = {0, 0, 0};
+        assertArrayEquals(expected, result, "Caso Común 2 falló");
     }
-    
-    /**
-     * Caso común 3: Solo tiendas (no hay robots para recolectar)
-     */
+
+    @Test
     public void testCasoComun3() {
-        System.out.println("=== Caso Común 3: Solo Tiendas ===");
-        
         int[][] days = {
-            {2, 10, 100},   // Tienda en 10 con 100 tenges
-            {2, 20, 200},   // Tienda en 20 con 200 tenges
-            {2, 30, 300}    // Tienda en 30 con 300 tenges
+            {2, 10, 100},
+            {2, 20, 200},
+            {2, 30, 300}
         };
-        
         int[] result = SilkRoadContest.solve(days);
-        
-        // Todos deben ser 0 (no hay robots)
-        boolean passed = (result[0] == 0 && result[1] == 0 && result[2] == 0);
-        
-        System.out.println("Resultados: " + arrayToString(result));
-        System.out.println(passed ? 
-            "✓ Caso Común 3: PASADO (0 ganancia sin robots)\n" : 
-            "✗ Caso Común 3: FALLIDO\n");
+        int[] expected = {0, 0, 0};
+        assertArrayEquals(expected, result, "Caso Común 3 falló");
     }
-    
-    /**
-     * Caso común 4: Robot y tienda en la misma ubicación
-     */
+
+    @Test
     public void testCasoComun4() {
-        System.out.println("=== Caso Común 4: Robot y Tienda Misma Ubicación ===");
-        
         int[][] days = {
-            {1, 50},        // Robot en 50
-            {2, 50, 100}    // Tienda en 50 con 100 tenges
+            {1, 50},
+            {2, 50, 100}
         };
-        
+        int[] expected = {0, 100};
         int[] result = SilkRoadContest.solve(days);
-        
-        // Día 1: 0 (solo robot)
-        // Día 2: 100 - 0 = 100 (distancia 0)
-        boolean passed = (result[0] == 0 && result[1] == 100);
-        
-        System.out.println("Resultados: " + arrayToString(result));
-        System.out.println(passed ? 
-            "✓ Caso Común 4: PASADO (distancia 0 = máxima ganancia)\n" : 
-            "✗ Caso Común 4: FALLIDO\n");
+        assertArrayEquals(expected, result, "Caso Común 4 falló");
     }
-    
-    /**
-     * Caso común 5: Múltiples robots, múltiples tiendas
-     */
+
+    @Test
     public void testCasoComun5() {
-        System.out.println("=== Caso Común 5: Múltiples Robots y Tiendas ===");
-        
         int[][] days = {
-            {1, 0},         // Robot en 0
-            {1, 100},       // Robot en 100
-            {2, 10, 50},    // Tienda en 10 con 50 tenges
-            {2, 90, 50}     // Tienda en 90 con 50 tenges
+            {1, 0},
+            {1, 100},
+            {2, 10, 50},
+            {2, 90, 50}
         };
-        
+        int[] expected = {0, 0, 40, 80};
         int[] result = SilkRoadContest.solve(days);
-        
-        // Día 1: 0 (solo 1 robot)
-        // Día 2: 0 (solo 2 robots)
-        // Día 3: 50-10 = 40 (1 robot puede ir a tienda)
-        // Día 4: (50-10) + (50-10) = 80 (cada robot a su tienda)
-        System.out.println("Resultados: " + arrayToString(result));
-        System.out.println("Esperado: [0, 0, 40, 80]");
-        
-        boolean passed = (result[0] == 0 && result[1] == 0 && 
-                         result[2] == 40 && result[3] == 80);
-        
-        System.out.println(passed ? 
-            "✓ Caso Común 5: PASADO\n" : 
-            "✗ Caso Común 5: FALLIDO\n");
+        assertArrayEquals(expected, result, "Caso Común 5 falló");
     }
-    
-    /**
-     * Caso común 6: Ganancia negativa (costo > tenges)
-     */
+
+    @Test
     public void testCasoComun6() {
-        System.out.println("=== Caso Común 6: Ganancia Negativa ===");
-        
         int[][] days = {
-            {1, 0},         // Robot en 0
-            {2, 100, 50}    // Tienda en 100 con 50 tenges (distancia 100 > 50)
+            {1, 0},
+            {2, 100, 50}
         };
-        
+        int[] expected = {0, 0};
         int[] result = SilkRoadContest.solve(days);
-        
-        // Día 2: No conviene mover (50 - 100 = -50), entonces 0
-        boolean passed = (result[0] == 0 && result[1] == 0);
-        
-        System.out.println("Resultados: " + arrayToString(result));
-        System.out.println(passed ? 
-            "✓ Caso Común 6: PASADO (no tomar si es negativo)\n" : 
-            "✗ Caso Común 6: FALLIDO\n");
+        assertArrayEquals(expected, result, "Caso Común 6 falló");
     }
-    
-    /**
-     * Caso común 7: Entrada vacía
-     */
+
+    @Test
     public void testCasoComun7() {
-        System.out.println("=== Caso Común 7: Entrada Vacía ===");
-        
         int[][] days = {};
         int[] result = SilkRoadContest.solve(days);
-        
-        boolean passed = (result.length == 0);
-        
-        System.out.println("Longitud resultado: " + result.length);
-        System.out.println(passed ? 
-            "✓ Caso Común 7: PASADO\n" : 
-            "✗ Caso Común 7: FALLIDO\n");
+        assertEquals(0, result.length, "Caso Común 7 falló");
     }
-    
-    /**
-     * Caso común 8: Entrada null
-     */
+
+    @Test
     public void testCasoComun8() {
-        System.out.println("=== Caso Común 8: Entrada Null ===");
-        
+        int[] result = null;
         try {
-            int[] result = SilkRoadContest.solve(null);
-            boolean passed = (result != null && result.length == 0);
-            System.out.println(passed ? 
-                "✓ Caso Común 8: PASADO (manejo de null)\n" : 
-                "✗ Caso Común 8: FALLIDO\n");
+            result = SilkRoadContest.solve(null);
+            assertNotNull(result, "Resultado no debería ser null");
+            assertEquals(0, result.length, "Caso Común 8 falló");
         } catch (Exception e) {
-            System.out.println("✗ Caso Común 8: FALLIDO (excepción: " + e.getMessage() + ")\n");
+            fail("Caso Común 8 lanzó excepción: " + e.getMessage());
         }
-    }
-    
-    /**
-     * Método auxiliar para convertir array a string
-     */
-    private String arrayToString(int[] arr) {
-        if (arr == null || arr.length == 0) return "[]";
-        
-        StringBuilder sb = new StringBuilder("[");
-        for (int i = 0; i < arr.length; i++) {
-            sb.append(arr[i]);
-            if (i < arr.length - 1) sb.append(", ");
-        }
-        sb.append("]");
-        return sb.toString();
-    }
-    
-    /**
-     * Ejecutar todos los casos comunes
-     */
-    public void runAllTests() {
-        System.out.println("============================================================");
-        System.out.println("      CASOS DE PRUEBA COMUNES - SILKROADCONTEST");
-        System.out.println("         Basados en el problema ICPC 2024");
-        System.out.println("============================================================\n");
-        
-        int passed = 0;
-        int total = 8;
-        
-        try {
-            testCasoComun1();
-            passed++;
-        } catch (Exception e) {
-            System.out.println("✗ Error en Caso 1: " + e.getMessage() + "\n");
-        }
-        
-        try {
-            testCasoComun2();
-            passed++;
-        } catch (Exception e) {
-            System.out.println("✗ Error en Caso 2: " + e.getMessage() + "\n");
-        }
-        
-        try {
-            testCasoComun3();
-            passed++;
-        } catch (Exception e) {
-            System.out.println("✗ Error en Caso 3: " + e.getMessage() + "\n");
-        }
-        
-        try {
-            testCasoComun4();
-            passed++;
-        } catch (Exception e) {
-            System.out.println("✗ Error en Caso 4: " + e.getMessage() + "\n");
-        }
-        
-        try {
-            testCasoComun5();
-            passed++;
-        } catch (Exception e) {
-            System.out.println("✗ Error en Caso 5: " + e.getMessage() + "\n");
-        }
-        
-        try {
-            testCasoComun6();
-            passed++;
-        } catch (Exception e) {
-            System.out.println("✗ Error en Caso 6: " + e.getMessage() + "\n");
-        }
-        
-        try {
-            testCasoComun7();
-            passed++;
-        } catch (Exception e) {
-            System.out.println("✗ Error en Caso 7: " + e.getMessage() + "\n");
-        }
-        
-        try {
-            testCasoComun8();
-            passed++;
-        } catch (Exception e) {
-            System.out.println("✗ Error en Caso 8: " + e.getMessage() + "\n");
-        }
-        
-        System.out.println("============================================================");
-        System.out.println("         RESUMEN: " + passed + "/" + total + " CASOS PASADOS");
-        System.out.println("============================================================");
-    }
-    
-    /**
-     * Método principal para ejecutar desde BlueJ o línea de comandos
-     */
-    public static void main(String[] args) {
-        System.out.println("\n*** EJECUTANDO CASOS DE PRUEBA COMUNES ***\n");
-        SilkRoadContestCTest tester = new SilkRoadContestCTest();
-        tester.runAllTests();
     }
 }
+

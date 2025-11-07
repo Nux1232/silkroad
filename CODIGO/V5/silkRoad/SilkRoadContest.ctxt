@@ -1,16 +1,16 @@
 #BlueJ class context
 comment0.target=SilkRoadContest
-comment0.text=\r\n\ Clase\ para\ resolver\ el\ problema\ de\ la\ marat\u00F3n\ ICPC\ 2024\ -\ The\ Silk\ Road\ with\ Robots\r\n\ Ciclo\ 3\ -\ DOPO-I03-2025-02\r\n\ \r\n\ Esta\ clase\ contiene\ los\ algoritmos\ para\:\r\n\ 1.\ Resolver\ el\ problema\ de\ la\ marat\u00F3n\ (calcular\ m\u00E1xima\ utilidad\ diaria)\r\n\ 2.\ Simular\ la\ soluci\u00F3n\ paso\ a\ paso\r\n
+comment0.text=\n\ Clase\ para\ resolver\ el\ problema\ de\ la\ marat\u00F3n\ ICPC\ 2024\ -\ The\ Silk\ Road\ with\ Robots\n\ Ciclo\ 3\ -\ DOPO-I03-2025-02\n\ \n\ Esta\ clase\ contiene\ los\ algoritmos\ para\:\n\ 1.\ Resolver\ el\ problema\ de\ la\ marat\u00F3n\ (calcular\ m\u00E1xima\ utilidad\ diaria)\n\ 2.\ Simular\ la\ soluci\u00F3n\ paso\ a\ paso\n
 comment1.params=days
 comment1.target=int[]\ solve(int[][])
-comment1.text=\r\n\ Resuelve\ el\ problema\ de\ la\ marat\u00F3n\:\ calcular\ la\ m\u00E1xima\ utilidad\ diaria\r\n\ \r\n\ Formato\ de\ entrada\ days[i]\:\r\n\ -\ days[i][0]\ \=\ tipo\ (1\ \=\ robot,\ 2\ \=\ tienda)\r\n\ -\ days[i][1]\ \=\ ubicaci\u00F3n\ (location)\r\n\ -\ days[i][2]\ \=\ tenges\ (solo\ si\ tipo\ \=\=\ 2)\r\n\ \r\n\ @param\ days\ Matriz\ con\ datos\ de\ cada\ d\u00EDa\r\n\ @return\ Array\ con\ la\ m\u00E1xima\ utilidad\ obtenible\ para\ cada\ d\u00EDa\r\n
+comment1.text=\n\ Resuelve\ el\ problema\ de\ la\ marat\u00F3n\:\ calcular\ la\ m\u00E1xima\ utilidad\ diaria\n\ \n\ Formato\ de\ entrada\ days[i]\:\n\ -\ days[i][0]\ \=\ tipo\ (1\ \=\ robot,\ 2\ \=\ tienda)\n\ -\ days[i][1]\ \=\ ubicaci\u00F3n\ (location)\n\ -\ days[i][2]\ \=\ tenges\ (solo\ si\ tipo\ \=\=\ 2)\n\ \n\ @param\ days\ Matriz\ con\ datos\ de\ cada\ d\u00EDa\n\ @return\ Array\ con\ la\ m\u00E1xima\ utilidad\ obtenible\ para\ cada\ d\u00EDa\n
 comment2.params=profitMatrix
 comment2.target=int\ findOptimalAssignment(int[][])
-comment2.text=\r\n\ Encuentra\ la\ asignaci\u00F3n\ \u00F3ptima\ de\ robots\ a\ tiendas\ usando\ DP\ con\ bitmask\r\n\ @param\ profitMatrix\ Matriz\ de\ ganancias\ [robot][store]\r\n\ @return\ M\u00E1xima\ ganancia\ total\r\n
+comment2.text=\n\ Encuentra\ la\ asignaci\u00F3n\ \u00F3ptima\ de\ robots\ a\ tiendas\ usando\ DP\ con\ bitmask\n\ @param\ profitMatrix\ Matriz\ de\ ganancias\ [robot][store]\n\ @return\ M\u00E1xima\ ganancia\ total\n
 comment3.params=days\ slow
 comment3.target=void\ simulate(int[][],\ boolean)
-comment3.text=\r\n\ Simula\ la\ soluci\u00F3n\ paso\ a\ paso,\ mostrando\ los\ movimientos\ d\u00EDa\ a\ d\u00EDa\r\n\ @param\ days\ Matriz\ con\ los\ datos\ de\ cada\ d\u00EDa\ (formato\ ICPC)\r\n\ @param\ slow\ true\ para\ simulaci\u00F3n\ lenta,\ false\ para\ simulaci\u00F3n\ r\u00E1pida\r\n
+comment3.text=\n\ Simula\ la\ soluci\u00F3n\ paso\ a\ paso,\ mostrando\ los\ movimientos\ d\u00EDa\ a\ d\u00EDa\n\ @param\ days\ Matriz\ con\ los\ datos\ de\ cada\ d\u00EDa\ (formato\ ICPC)\n\ @param\ slow\ true\ para\ simulaci\u00F3n\ lenta,\ false\ para\ simulaci\u00F3n\ r\u00E1pida\n
 comment4.params=milliseconds
 comment4.target=void\ waitTime(int)
-comment4.text=\r\n\ M\u00E9todo\ auxiliar\ para\ pausas\ en\ la\ simulaci\u00F3n\r\n
+comment4.text=\n\ M\u00E9todo\ auxiliar\ para\ pausas\ en\ la\ simulaci\u00F3n\n
 numComments=5
